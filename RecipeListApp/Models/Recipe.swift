@@ -18,7 +18,7 @@ class Recipe: Identifiable, Decodable {
     var totalTime:String
     var servings:Int
     var highlights:[String]
-    var ingredients:[Ingredients]
+    var ingredients:[Ingredient]
     var directions:[String]
     
     func print(){

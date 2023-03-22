@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FeaturedView: View {
     @EnvironmentObject var model: RecipeModel
-    
+    @State var isDetailViewShowing = false
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0) {
@@ -22,20 +22,29 @@ struct FeaturedView: View {
                 TabView {
                     ForEach(0..<model.recipes.count, id: \.self) { i in
                         if model.recipes[i].featured {
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(.white)
-                                VStack {
-                                    Image(model.recipes[i].image)
-                                        .resizable()
-                                        .scaledToFill()
-                                    Text(model.recipes[i].name)
-                                        .padding(10)
-                                        .font(.headline)
+                            Button {
+                                // show the recipe detail sheet
+                                self.isDetailViewShowing = true
+                            } label: {
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.white)
+                                    VStack {
+                                        Image(model.recipes[i].image)
+                                            .resizable()
+                                            .scaledToFill()
+                                        Text(model.recipes[i].name)
+                                            .padding(10)
+                                            .font(.headline)
+                                    }
+                                }.frame(width: geo.size.width - 40, height: geo.size.height - 100,alignment: .center)
+                                    .cornerRadius(20)
+                                    .shadow(color: Color(hue: 1.0, saturation: 0.021, brightness: 0.792), radius: 10, x: -10 , y: 5)
+                            }.buttonStyle(PlainButtonStyle())
+                                .sheet(isPresented: $isDetailViewShowing) {
+                                    RecipeDetailView(recipe: model.recipes[i])
                                 }
-                            }.frame(width: geo.size.width - 40, height: geo.size.height - 100,alignment: .center)
-                                .cornerRadius(20)
-                                .shadow(color: Color(hue: 1.0, saturation: 0.021, brightness: 0.792), radius: 10, x: -10 , y: 5)
+
                         }
                     }
                 }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))

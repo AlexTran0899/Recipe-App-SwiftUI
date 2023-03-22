@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Ingredients: Identifiable, Decodable {
+class Ingredient: Identifiable, Decodable {
     var id:UUID?
     var name: String
     var num: Int?
