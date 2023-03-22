@@ -16,6 +16,7 @@
 		FA420A5729C9FCA800611A3B /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA420A5629C9FCA800611A3B /* RecipeModel.swift */; };
 		FA420A5929C9FE0800611A3B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA420A5829C9FE0800611A3B /* DataService.swift */; };
 		FA420A5D29CA090300611A3B /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA420A5C29CA090300611A3B /* RecipeDetailView.swift */; };
+		FA420AA629CA7E3E00611A3B /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA420AA529CA7E3E00611A3B /* RecipeTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		FA420A5629C9FCA800611A3B /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		FA420A5829C9FE0800611A3B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FA420A5C29CA090300611A3B /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		FA420AA529CA7E3E00611A3B /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				FA420A3D29C9FA0D00611A3B /* RecipeListApp.swift */,
 				FA420A3F29C9FA0D00611A3B /* RecipeListView.swift */,
 				FA420A5C29CA090300611A3B /* RecipeDetailView.swift */,
+				FA420AA529CA7E3E00611A3B /* RecipeTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				FA420A4029C9FA0D00611A3B /* RecipeListView.swift in Sources */,
 				FA420A3E29C9FA0D00611A3B /* RecipeListApp.swift in Sources */,
 				FA420A5929C9FE0800611A3B /* DataService.swift in Sources */,
+				FA420AA629CA7E3E00611A3B /* RecipeTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
